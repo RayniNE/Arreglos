@@ -1,0 +1,27 @@
+﻿@model FormModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Arreglos</h1>
+
+<form asp-action="Lista" method="post">
+
+    <div class="text-center">
+
+        @for (int i = 0; i < 10; i++)
+        {
+            <div class="input-group-prepend">
+                <span class="input-group-text">Ingrese el número en la posición @(i+1)</span>
+                <input asp-for="Numeros[i]" class="form-control" />
+            </div>
+            <br>
+         }
+
+
+            <div class="text-center">
+                <button class="btn btn-dark" type="submit"> Enviar </button>
+            </div>
+
+</form>
+
